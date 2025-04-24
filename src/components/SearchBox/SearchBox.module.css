@@ -1,0 +1,29 @@
+.search-box {
+  width: 100%;
+  max-width: 400px;
+  margin: 0 auto 45px auto;
+  padding: 20px;
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.search-label {
+  font-size: 16px;
+  font-weight: 600;
+  color: #333;
+}
+
+.search-field {
+  padding: 10px 14px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  transition: border-color 0.2s ease;
+}
+
+.search-field:focus {
+  outline: none;
+  border-color: #007bff;
+}

@@ -1,0 +1,5 @@
+.contacts-grid {
+    display: flex;
+    gap: 70px;
+    flex-wrap: wrap;
+}

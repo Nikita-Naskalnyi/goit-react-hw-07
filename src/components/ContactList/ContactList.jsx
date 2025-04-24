@@ -1,0 +1,23 @@
+
+import { useSelector } from "react-redux";
+import Contact from "../Contact/Contact";
+import styles from "./ContactList.module.css";
+
+const ContactList = () => {
+  const contacts = useSelector(state => state.contacts.items);
+  const filter = useSelector(state => state.filters.name.toLowerCase());
+
+  const visibleContacts = contacts.filter(contact =>
+    contact.name.toLowerCase().includes(filter)
+  );
+
+  return (
+    <ul className={styles["contacts-grid"]}>
+      {visibleContacts.map(({ id, number, name }) => (
+        <Contact key={id} id={id} number={number} name={name} />
+      ))}
+    </ul>
+  );
+};
+
+export default ContactList;
